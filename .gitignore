@@ -1,0 +1,32 @@
+# 
+logs
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+build/
+dist/
+*.egg-info/
+*.egg
+*.py[cod]
+*.so
+*~
+
+# python ignores
+*__pycache__
+__pycache__/
+*.pytest_cache
+*.benchmarks
+
+# VisualStudioCode
+.vscode/
+/.vscode
+.vscode/*
+/.vscode*
+workspace.*
+
+# Pycharm
+.idea/
+./idea*
+*./idea
