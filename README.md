@@ -94,6 +94,63 @@ Verify the installation of Unreal you should be able to open the editor window.
     $./Update.sh
 ```
 
+6- Build [CARLA](https://carla.org/)
+
+You need to Modify bashrc Files
+```
+    $cd && vim ~/.bashrc
+```
+
+Add text to bottom line: `export UE4_ROOT=~/YOUT/PATH/UNREALENGINE-CARLA`
+
+Into the line 6th line `carla/Util/BuildTools/BuildCarlaUE4.sh` include `UE4_ROOT=~/YOUT/PATH/UNREALENGINE-CARLA`
+
+```
+    $cd ~/carla && make PythonAPI
+
+    $make launch
+```
+
+### First steps and configuration.
+
+It is required to have the 2000, 2001, 2002 ports (TCP - UDP) enabled and available. You can check with:
+
+```
+    $sudo ufw status
+```
+
+If you have problems, you could disable Firewal, REMEMBER THIS IS DANGEROUS IF YOU DO IT IN PUBLIC LOCATIONS.
+
+```
+    $sudo ufw disable
+```
+
+In carla's folder, you can run the server mode with different scenarios. you could use.
+
+```
+    $./CarlaUE4.sh /Game/Maps/RaceTrack -windowed -ResX=800 -ResY=600 -quality-level=low -nosound -benchmark -fps=20 -carla-server
+
+    or 
+
+    $./CarlaUE4.sh /Game/Maps/Town01 -windowed -ResX=800 -ResY=600 -quality-level=low -nosound -benchmark -fps=20 -carla-server
+
+    or 
+
+    $./CarlaUE4.sh /Game/Maps/Town02 -windowed -ResX=800 -ResY=600 -quality-level=low -nosound -benchmark -fps=20 -carla-server
+```
+
+In another terminal window you can run the client.
+
+```
+    $python ...this_repo/PythonClient/manual_control.py
+```
+
+or runt the pathFollow
+
+```
+    $python ...this_repo/PythonClient/pathFollow.py
+```
+
 ### TODO
 
 *------------
