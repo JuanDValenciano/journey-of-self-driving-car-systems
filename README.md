@@ -2,7 +2,7 @@
 
 Perhaps it is another [CARLA](https://carla.org/) setup and configuration repo, it also includes a simple path planning and configuration that should be done on a Linux system.
 
-# Requirements
+## Requirements
 
 The requirements to build the proyect:
 
@@ -12,7 +12,7 @@ The requirements to build the proyect:
 
 3- 
 
-# Steps to Build and lauch
+## Steps to Build and lauch
 
 Config my environment
 
@@ -94,10 +94,18 @@ Verify the installation of Unreal you should be able to open the editor window.
     $./Update.sh
 ```
 
-# Autor
+### TODO
 
---------------
+*------------
 
-# License
+*------------
+
+*------------
+
+## Autor
+
+* Juan D. Valenciano - (jvalenciano@unal.edu.co)
+
+## License
 
 unlicense
